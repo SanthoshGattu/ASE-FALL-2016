@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<head>
+    </script>
+
+    <title>
+    Registration
+    </title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <style type="text/css">
+        form {
+
+            text-align: center;
+        }
+
+        H2 { text-align: center
+        }
+
+        input[type=text], input[type=password] {
+            width:350px;
+            height:30px;
+            padding:5px;
+            padding-left:5px;
+
+            border-radius:5px;
+            font-size:1em;
+            border:1px solid grey;
+            margin-bottom:10px;
+        }
+
+        button {
+            background-color: #60AFFE;
+            color: black;
+            margin: 10px ;
+            border: black;
+            cursor: pointer;
+            height:45px;
+            width:265px;
+            text-align: center;
+            border-radius:5px;
+            font-size:1em;
+
+
+
+        }
+
+        label{
+            padding-top:10px;
+            text-align:left;
+            width:200px;
+            float:left;
+            color:#333333;
+            clear : right;
+            padding-left:500 px;
+
+        }
+
+
+
+        .container {
+            position:relative;
+            left:250px;
+            color:#333333;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 0 px;
+        }
+
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 50 px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+
+        }
+    </style>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form action="action_page.php">
+    <div class="imgcontainer">
+    </div>
+
+    <div class="container" >
+        <label><b>FirstName</b></label>
+        <input type="text" placeholder="Enter FirstName" name="fname" required>
+
+    </div>
+    <div class="container">
+        <label><b>LastName</b></label>
+        <input type="text" placeholder="Enter LastName" name="lname" required>
+
+    </div>
+    <div class="container">
+        <label><b>Email Address</b></label>
+        <input type="text" placeholder="Enter Email Address" name="email" required>
+
+    </div>
+    <div class="container">
+        <label><b>Mobile Number</b></label>
+        <input type="text" placeholder="Enter Mobile Number" name="number" required>
+
+    </div>
+    <div class="container">
+        <label><b>Password</b></label>
+        <input type="text" placeholder="Enter Password" name="pwd" required>
+
+    </div>
+    <div class="container">
+        <label><b>Confirm Password</b></label>
+        <input type="text" placeholder="Enter Password" name="cpwd" required>
+
+    </div>
+    <div>
+        <button input id="RegisterButton" type="submit">Submit</button>
+
+    </div>
+
+
+</form>
+<script>
+    $("#validationForm").submit(function(event){
+        var error="";
+        event.preventDefault();
+        if ($("#uname").val()==""){
+            error=error+"</br>Please enter a username";}
+        if ($("#psw").val()==""){
+            error=error+"</br>Please enter a password";}
+        else{
+            if ($("#psw").val()!="Cognizant@123" ){
+                error=error+"</br>Username and Password do not match";}
+            if ($("#uname").val()!="gattusanthosh.92@gmail.com" ){
+                error=error+"</br>Username and Password do not match";}
+        }
+
+        if (error==""){
+            alert("Login success")
+            window.location.href = "Home.html";
+        }
+
+        $("#errorDiv").html(error);
+    });
+
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<head>
+    </script>
+
+    <title>
+    LogIn
+    </title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <style>
+        form {
+
+            text-align: center;
+        }
+
+        H2 { text-align: center }
+
+        input[type=text], input[type=password] {
+            width:300px;
+            height:30px;
+            padding:5px;
+            border-radius:5px;
+            font-size:1em;
+            border:1px solid grey;
+            margin-bottom:10px;
+        }
+
+        button {
+            background-color: #60AFFE;
+            color: black;
+            margin: 10px ;
+            border: none;
+            cursor: pointer;
+            height:45px;
+            width:265px;
+            text-align: center;
+            border-radius:5px;
+            font-size:1em;
+
+
+        }
+
+
+
+        .container {
+            padding: 0 px;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 0 px;
+        }
+
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 50 px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+
+        }
+    </style>
+</head>
+<body>
+
+<h2>Login to the website</h2>
+
+<form action="action_page.php">
+    <div class="imgcontainer">
+    </div>
+
+    <div class="container">
+        <label><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+    </div>
+
+    <div class="container">
+        <label><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+    </div>
+
+    <div class="psw"> <a href="#">Forgot password?</a></div>
+    </div>
+    <div>
+        <button input id="SubmitButton" type="submit">Login</button>
+
+    </div>
+
+
+
+    <div class="container" >
+
+        <label><b>Don't have an account?</b></label>
+    </div>
+    <div>
+        <button input id="RegisterButton" type="submit">Register</button>
+    </div>
+
+</form>
+<script>
+
+    $("#validationForm").submit(function(event){
+        var error="";
+        event.preventDefault();
+        if ($("#uname").val()==""){
+            error=error+"</br>Please enter a username";}
+        if ($("#psw").val()==""){
+            error=error+"</br>Please enter a password";}
+        else{
+            if ($("#psw").val()!="Cognizant@123" ){
+                error=error+"</br>Username and Password do not match";}
+            if ($("#uname").val()!="gattusanthosh.92@gmail.com" ){
+                error=error+"</br>Username and Password do not match";}
+        }
+
+        if (error==""){
+            alert("Login success")
+            window.location.href = "Home.html";
+        }
+
+        $("#errorDiv").html(error);
+    });
+
+</script>
+
+</body>
+</html>
+
