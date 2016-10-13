@@ -1,0 +1,43 @@
+<ion-view view-title="USER MASHUP" name="login-view">
+  <ion-header-bar class="bar-stable">
+<div class="bar bar-header bar-dark">
+   <button class="button icon ion-navicon"></button>
+      
+   <button class="button icon ion-home"></button>
+</div>
+  </ion-header-bar>
+  <ion-content class="padding">
+
+
+</style
+<span style="padding: 0 100px">&nbsp;</span>
+ <h1 style=  "text-align:center" class="form-signin-heading">Welcome to ConvertME!</h1>
+    <h2 style=  "text-align:center" class="form-signin-heading">Login Here</h2>
+	<div class="hero" ng-controller="HeroCtrl" ng-style="heroImage"></div>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <input type="text" id="username" class="form-control" placeholder="Enter UserName/EmailID" required autofocus ng-model="username">
+      </label>
+      <label class="item item-input">
+        <input type="password" id="password" class="form-control" placeholder="Enter Password" required autofocus ng-model="password">
+      </label>
+    </div>
+    <button  class="button button-block button-calm padding-horizontal" ng_click="login(username,password)" type="submit">Login</button>
+
+    <h5>
+      <input style="color:blue" type="checkbox">
+      <label class="royal" for="checkbox">Remember me.</label>
+      <span style="padding: 0 100px">&nbsp;</span>
+      <a href="#forgot" class="assertive" >Forgot Password?</a>
+    </h5>
+
+
+      <h4 style="color:">Don't have an account?<span style="padding: 0 20px">&nbsp;</span>
+	  <button class="button button-block button-calm padding-horizontal" ng_click="#register" type="submit">Register</button>
+      </h4>
+
+      <div id="x"></div>
+ 
+
+ </ion-content>
+</ion-view>
