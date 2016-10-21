@@ -15,3 +15,5 @@ Lab Assignment-5 Wiki page link: https://github.com/santhoshgattu/ASE-FALL-2016/
 Lab Assignment-6 Wiki page link: https://github.com/santhoshgattu/ASE-FALL-2016/wiki/Lab6
 
 Lab Assignment-7 Wiki page link: https://github.com/santhoshgattu/ASE-FALL-2016/wiki/Lab7
+
+Lab Assignment-8 Wiki page link: https://github.com/santhoshgattu/ASE-FALL-2016/wiki/Lab8
